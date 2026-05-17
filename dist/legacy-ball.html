@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Legacy Ball Layer</title>
+    <link rel="stylesheet" crossorigin href="./assets/index-wo1cbn-x.css" />
+    <style>
+      html,
+      body {
+        margin: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
+        background: transparent !important;
+      }
+
+      body::before,
+      body::after {
+        display: none !important;
+      }
+
+      #root {
+        position: fixed !important;
+        inset: 0 !important;
+        isolation: isolate !important;
+        background: transparent !important;
+      }
+
+      #root::before,
+      #root::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        inset: 0;
+        z-index: 3;
+        mix-blend-mode: screen;
+      }
+
+      #root::before {
+        background:
+          radial-gradient(circle at 52% 34%, rgba(255, 138, 56, 0.56), transparent 11%),
+          radial-gradient(circle at 58% 41%, rgba(255, 138, 56, 0.34), transparent 18%);
+        filter: blur(30px);
+      }
+
+      #root::after {
+        background:
+          radial-gradient(circle at 72% 34%, rgba(255, 255, 255, 0.42), transparent 10%),
+          radial-gradient(circle at 78% 42%, rgba(255, 255, 255, 0.22), transparent 18%);
+        filter: blur(28px);
+      }
+
+      #root > div {
+        min-height: 100vh !important;
+        background: transparent !important;
+      }
+
+      #root > div > main,
+      #root h1,
+      #root h2,
+      #root h3,
+      #root p,
+      #root article,
+      #root button {
+        display: none !important;
+      }
+
+      #root canvas {
+        position: relative;
+        z-index: 2;
+        background: transparent !important;
+        transform: translate3d(-7%, -18%, 0) scale(1.5);
+        transform-origin: 68% 18%;
+        filter:
+          drop-shadow(-62px 0 74px rgba(255, 138, 56, 0.4))
+          drop-shadow(72px 0 78px rgba(255, 255, 255, 0.32));
+      }
+
+      @media (max-width: 1024px) {
+        #root::before {
+          background:
+            radial-gradient(circle at 50% 30%, rgba(255, 138, 56, 0.46), transparent 15%);
+        }
+
+        #root::after {
+          background:
+            radial-gradient(circle at 67% 30%, rgba(255, 255, 255, 0.34), transparent 13%);
+        }
+
+        #root canvas {
+          transform: translate3d(-4%, -12%, 0) scale(1.28);
+          transform-origin: 62% 18%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" crossorigin src="./assets/index-WYYvAp5A.js"></script>
+  </body>
+</html>
